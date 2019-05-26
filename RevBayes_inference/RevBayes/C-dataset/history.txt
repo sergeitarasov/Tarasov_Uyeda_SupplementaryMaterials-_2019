@@ -1,0 +1,30 @@
+?round
+round(2.34)
+?dnUniform
+observed_phylogeny <- readTrees("data/indoeuropean-C.tre")
+observed_phylogeny
+observed_phylogeny <- readTrees("data/indoeuropean-C.tre")
+observed_phylogeny
+_mvSlide
+?mvSlide
+observed_phylogeny[1]
+observed_phylogeny[0]
+observed_phylogeny[1000]
+observed_phylogeny[1001]
+observed_phylogeny.length()
+observed_phylogeny.size()
+dnUniform(1,2)
+a~dnUniform(1,2)
+a
+a~dnUniform(1,2)
+a
+q()
+q()a
+quit()
+q()
+?mvSlide
+q()
+?dnPhyloCTMC
+q()
+?dnPhyloCTMC
+q()

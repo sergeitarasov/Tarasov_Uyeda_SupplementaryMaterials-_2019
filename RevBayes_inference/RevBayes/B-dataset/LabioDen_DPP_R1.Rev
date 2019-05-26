@@ -1,0 +1,134 @@
+################################################################################
+#
+# RevBayes: DPP for Ansetral Character State Reconstruction of discrete traits
+#
+#
+#
+# author:  S. Tarasov 2019
+#
+################################################################################
+
+analysis_name = "data_B_Run_1"
+#######
+
+NUM_STATES = 2
+
+data = readDiscreteCharacterData(file="data/matrix_LB.nex")
+
+n_species <- data.ntaxa()
+n_branches <- 2 * n_species - 2
+
+observed_phylogeny <- readTrees("data/indoeuropean-B.tre")
+phylo_size <- observed_phylogeny.size()
+#############
+
+mni = 0
+mvi = 0
+
+#######
+# Set up DPP
+######
+
+#-- tree moves across tree smaple
+tr_rnd ~ dnUniform(1, phylo_size)
+moves[++mvi] = mvSlide(tr_rnd, tune=false, weight=1, phylo_size)
+tr_id := round(tr_rnd)
+psi:=observed_phylogeny[tr_id]
+#-------------
+
+### the concentration parameter of the DPP set to an expected value that leads to ~ 5 rate categories
+pr_mean_cats <- 5.0
+mean_CP <- fnDppConcFromMean(pr_mean_cats, n_branches)
+cp_shape <- 2.0
+cp_rate <- cp_shape / mean_CP
+concentration ~ dnGamma(cp_shape, cp_rate)
+
+### the base-distribution, G0, from which the rate for each category is drawn
+### here it is a gamma distribution
+g0_a <- 4.0
+g0_b <- 8.0
+g0 = dnGamma(g0_a, g0_b)
+
+### the vector of branch rates are given a Dirichlet process prior
+### this is conditioned on the concentration parameter, the base distribution, and the number of branches
+branch_rates ~ dnDPP( baseDistribution=g0, concentration=concentration, numElements=n_branches)
+
+
+### and important deterministic node computed from the vector of branch rates
+### this parameter is also needed for the Gibbs move on the gamma-distributed concentration parameter
+n_cats := fnNumUniqueInVector(branch_rates)
+
+### a helpful parameter to monitor
+mean_rt := mean(branch_rates)
+
+
+
+moves[++mvi] = mvDPPValueScaling( branch_rates, weight=4, ln(2.0) )
+moves[++mvi] = mvDPPAllocateAuxGibbs( branch_rates, numAux=4, weight=1 )
+moves[++mvi] = mvDPPGibbsConcentration(concentration=concentration, numDPPCats=n_cats, gammaShape=cp_shape, gammaRate=cp_rate, numElements=n_branches, weight=6.0)
+######################
+#####################
+
+#######################
+# Character Evolution Model
+#######################
+
+# declare rate matrix
+for (i in 1:NUM_STATES) {
+  for (j in 1:NUM_STATES) {
+    rates[i][j] <-0.0
+  }
+}
+
+
+#rate prior
+r12 ~ dnExp(10)
+
+moves[++mvi] = mvScale(r12, lambda=1, tune=true, weight=2)
+
+# place rate categories into matrix
+rates[1][2]<-1
+rates[2][1]:=r12
+
+
+
+#make rate matrix
+Q := fnFreeK(transition_rates = rates, rescaled=false, matrixExponentialMethod="eigen")
+
+
+
+#####################################
+# Set up the root state frequencies #
+#####################################
+
+rate_category_prior <- simplex(1,1)
+
+########
+
+phyMorpho ~ dnPhyloCTMC(tree = psi, Q=Q, branchRates=branch_rates, type="Standard", rootFrequencies=rate_category_prior)
+phyMorpho.clamp(data)
+
+
+####
+
+mymodel = model(Q)
+
+####################################
+#  monitors
+###################################
+
+#  full model
+monitors[++mni] = mnModel(filename="output/" + analysis_name + ".log", printgen=1)
+# screen
+monitors[++mni] = mnScreen(printgen=1)
+
+###############
+# run MCMC analysis
+###############
+mymcmc = mcmc(mymodel, monitors, moves, nruns=1, moveschedule="random")
+
+### pre-burnin to tune the proposals
+mymcmc.burnin(generations=2000, tuningInterval=500)
+
+# Run the MCMC #
+mymcmc.run(generations=100000)

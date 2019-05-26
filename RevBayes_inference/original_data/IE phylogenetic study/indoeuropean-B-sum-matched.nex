@@ -1,0 +1,127 @@
+#NEXUS
+[R-package APE, Mon Mar 13 14:37:15 2017]
+
+BEGIN TAXA;
+	DIMENSIONS NTAX = 57;
+	TAXLABELS
+		Modern_Armenian<east2283>
+		Classical_Armenian<clas1249>
+		Ancient_Greek<anci1242>
+		Modern_Greek<mode1248>
+		Albanian<tosk1239>
+		Ossetic<osse1243>
+		Avestan<aves1237>
+		Pashto<nort2646>
+		Modern_Persian<west2369>
+		Baluchi<sout2642>
+		Singhalese<sinh1246>
+		Nepali<nepa1254>
+		Hindi<hind1269>
+		Marathi<mara1378>
+		Oriya<nucl1284>
+		Maithili<mait1250>
+		Kashmiri<kash1277>
+		Romani<vlax1238>
+		Vedic_Sanskrit<sans1269>
+		Romanian<roma1327>
+		Sardinian<camp1261>
+		Italian<ital1282>
+		French<stan1290>
+		Spanish<stan1288>
+		Latin<lati1261>
+		Modern_Breton<bret1244>
+		Modern_Welsh<wels1247>
+		Modern_Irish<iris1253>
+		Old_Irish<oldi1245>
+		Gothic<goth1244>
+		Old_English<olde1238>
+		Modern_English<stan1293>
+		Afrikaans<afri1274>
+		Old_High_German<oldh1241>
+		Swiss_German<swis1247>
+		Old_Norse<oldn1244>
+		Icelandic<icel1247>
+		Swedish<swed1254>
+		Bulgarian<bulg1262>
+		Old_Church_Slavic<chur1257>
+		Upper_Sorbian<uppe1395>
+		Russian<russ1263>
+		Latvian<latv1249>
+		Modern_Lithuanian<lith1251>
+		Tocharian_B<tokh1243>
+		Luwian<hier1240>
+		Hittite<hitt1242>
+		Middle_English<midd1317>
+		Middle_Welsh<>
+		Middle_Persian<pahl1241>
+		Middle_High_German<midd1343>
+		Middle_Breton<>
+		Old_Saxon<olds1250>
+		Old_Lithuanian<>
+		Pali<pali1273>
+		Old_Welsh<oldw1239>
+		Old_Breton<>
+	;
+END;
+BEGIN TREES;
+	TRANSLATE
+		1	Modern_Armenian<east2283>,
+		2	Classical_Armenian<clas1249>,
+		3	Ancient_Greek<anci1242>,
+		4	Modern_Greek<mode1248>,
+		5	Albanian<tosk1239>,
+		6	Ossetic<osse1243>,
+		7	Avestan<aves1237>,
+		8	Pashto<nort2646>,
+		9	Modern_Persian<west2369>,
+		10	Baluchi<sout2642>,
+		11	Singhalese<sinh1246>,
+		12	Nepali<nepa1254>,
+		13	Hindi<hind1269>,
+		14	Marathi<mara1378>,
+		15	Oriya<nucl1284>,
+		16	Maithili<mait1250>,
+		17	Kashmiri<kash1277>,
+		18	Romani<vlax1238>,
+		19	Vedic_Sanskrit<sans1269>,
+		20	Romanian<roma1327>,
+		21	Sardinian<camp1261>,
+		22	Italian<ital1282>,
+		23	French<stan1290>,
+		24	Spanish<stan1288>,
+		25	Latin<lati1261>,
+		26	Modern_Breton<bret1244>,
+		27	Modern_Welsh<wels1247>,
+		28	Modern_Irish<iris1253>,
+		29	Old_Irish<oldi1245>,
+		30	Gothic<goth1244>,
+		31	Old_English<olde1238>,
+		32	Modern_English<stan1293>,
+		33	Afrikaans<afri1274>,
+		34	Old_High_German<oldh1241>,
+		35	Swiss_German<swis1247>,
+		36	Old_Norse<oldn1244>,
+		37	Icelandic<icel1247>,
+		38	Swedish<swed1254>,
+		39	Bulgarian<bulg1262>,
+		40	Old_Church_Slavic<chur1257>,
+		41	Upper_Sorbian<uppe1395>,
+		42	Russian<russ1263>,
+		43	Latvian<latv1249>,
+		44	Modern_Lithuanian<lith1251>,
+		45	Tocharian_B<tokh1243>,
+		46	Luwian<hier1240>,
+		47	Hittite<hitt1242>,
+		48	Middle_English<midd1317>,
+		49	Middle_Welsh<>,
+		50	Middle_Persian<pahl1241>,
+		51	Middle_High_German<midd1343>,
+		52	Middle_Breton<>,
+		53	Old_Saxon<olds1250>,
+		54	Old_Lithuanian<>,
+		55	Pali<pali1273>,
+		56	Old_Welsh<oldw1239>,
+		57	Old_Breton<>
+	;
+	TREE * UNTITLED = [&R] ((((((1:1847.924697,2:363.4734649):4500.584802,(3:1984.015151,4:4436.843671):1911.665829):63.81331053,5:6412.32281):595.2124319,((((6:3581.995846,7:1053.576986):82.02759114,(8:2274.900154,((9:1712.463017,10:1712.463017):53.53698255,50:0):508.9001542):1389.123283):905.1963885,(19:535.6432375,(((11:2112.588616,(12:1855.360892,((13:1436.698475,14:1436.698475):181.2005616,(15:1459.475024,16:1459.475024):158.4240121):237.4618557):257.2277242):579.0322151,(17:2480.88861,18:2480.88861):210.7322214):258.3791688,55:750):648.466834):970.7529921):2220.883406,(((((20:1858.354923,(21:1706.224061,(22:1535.996796,(23:1303.623281,24:1303.623281):232.3735149):170.2272652):152.130862):345.6319578,25:134.2128493):3298.319384,((((27:716,49:0):300,56:0):543.096168,((26:641,52:0):400,57:0):518.096168):2140.966253,(28:2190.39404,29:937.9042829):1509.668382):1802.243843):223.4043247,(30:1360.227899,(((33:1418.335761,(34:279.1783678,(35:741,51:0):541.036655):136.2991059):113.7878466,((31:120.1855899,(32:691,48:0):527.6180927):247.3819073,53:410):66.12360744):338.66085,((36:369.5490714,37:1119.097598):224.0560936,38:1343.153691):527.6307663):1134.125515):2720.800616):881.0644116,(((39:1249.904236,40:284.5226249):301.6437037,(41:1142.454248,42:1142.454248):409.0936913):1397.082814,(43:1359.358472,(44:416,54:0):943.3584723):1589.272281):3658.144247):183.3282314):217.4320098):231.4584362,45:6052.47276):609.5506698,(46:2105.069583,47:1803.919742):2568.312172);
+END;

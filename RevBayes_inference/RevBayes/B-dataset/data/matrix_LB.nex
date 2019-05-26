@@ -1,0 +1,60 @@
+#NEXUS
+[Data written by write.nexus.RevBayes,  Mon Apr  1 16:11:24 2019 ]
+BEGIN DATA;
+ DIMENSIONS NTAX=52 NCHAR=10;
+FORMAT DATATYPE = STANDARD GAP = - MISSING = ? SYMBOLS = "0 1";
+MATRIX
+'Albanian<tosk1239>' 0110000010
+'Luwian<hier1240>' 0000000000
+'Hittite<hitt1242>' 0000000000
+'Classical_Armenian<clas1249>' ???0000000
+'Modern_Armenian<east2283>' 1110000000
+'Latvian<latv1249>' 0010000000
+'Modern_Lithuanian<lith1251>' 0010000000
+'Old_Breton<>' ??0?00?000
+'Modern_Breton<bret1244>' 1111111001
+'Modern_Irish<iris1253>' 1011100001
+'Old_Welsh<oldw1239>' ??0?00?000
+'Old_Irish<oldi1245>' 0000000000
+'Modern_Welsh<wels1247>' 1111111001
+'Afrikaans<afri1274>' 1110011000
+'Swiss_German<swis1247>' 1110011001
+'Modern_English<stan1293>' 1100001010
+'Gothic<goth1244>' 1100001000
+'Icelandic<icel1247>' 1111011000
+'Old_High_German<oldh1241>' 1100001001
+'Old_English<olde1238>' 1100001000
+'Old_Norse<oldn1244>' 1111011000
+'Old_Saxon<olds1250>' 1100001000
+'Swedish<swed1254>' 1110011001
+'Ancient_Greek<anci1242>' 0000000000
+'Modern_Greek<mode1248>' 1110110001
+'Hindi<hind1269>' 0010000000
+'Kashmiri<kash1277>' 0000000000
+'Maithili<mait1250>' 0000000000
+'Marathi<mara1378>' 0000000000
+'Nepali<nepa1254>' 0000000000
+'Oriya<nucl1284>' 0000000000
+'Singhalese<sinh1246>' 0000000000
+'Vedic_Sanskrit<sans1269>' 0010000000
+'Romani<vlax1238>' 0111000000
+'Pali<pali1273>' 0010000000
+'Avestan<aves1237>' ??0000000?
+'Middle_Persian<pahl1241>' 1101000001
+'Modern_Persian<west2369>' 1110000001
+'Ossetic<osse1243>' 1110000001
+'Pashto<nort2646>' ???0000000
+'Baluchi<sout2642>' 0000000000
+'Sardinian<camp1261>' 1000010100
+'Spanish<stan1288>' 1000010100
+'French<stan1290>' 1110111101
+'Italian<ital1282>' 1110110101
+'Latin<lati1261>' 1000010100
+'Romanian<roma1327>' 1010110101
+'Bulgarian<bulg1262>' 0010000000
+'Old_Church_Slavic<chur1257>' 0010000000
+'Russian<russ1263>' 0010000000
+'Upper_Sorbian<uppe1395>' 0010000000
+'Tocharian_B<tokh1243>' 0000000000
+;
+ END;
