@@ -1,7 +1,7 @@
 # Comment on ''Human sound systems are shaped by post-Neolithic changes in bite configuration''
 **Sergei Tarasov and Josef C. Uyeda**
 
-The description of the analyses can be found in *Analyses_Description.pdf*
+The description of the analyses is in *Analyses_Description.pdf*
 
 The original paper:
 
