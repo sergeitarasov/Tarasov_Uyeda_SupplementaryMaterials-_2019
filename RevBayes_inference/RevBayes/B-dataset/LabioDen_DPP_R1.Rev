@@ -2,7 +2,8 @@
 #
 # RevBayes: DPP for Ansetral Character State Reconstruction of discrete traits
 #
-#
+#  DPP is set as suggested at
+#  https://github.com/revbayes/revbayes_tutorial/blob/master/RB_DPPRelaxedClock_Tutorial/scripts/m_DPP_bears.Rev
 #
 # author:  S. Tarasov 2019
 #
