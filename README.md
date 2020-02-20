@@ -1,7 +1,9 @@
 # Causal modeling refutes Hockett's hypothesis that bite configuration affects human sound evolution
 **Sergei Tarasov and Josef C. Uyeda**
 
-This repository contains files necessary to reproduce all statistical analyses discussed in our comment. The description of the analyses is given in *Analyses_Description.pdf*
+This repository contains files necessary to reproduce all statistical analyses discussed in our paper that re-analyzes data from the paper given below. 
+
+The description of the analyses is given in *Analyses_Description.pdf*
 
 
 
